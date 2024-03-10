@@ -11,11 +11,11 @@ import Img3 from '../assets/projects_arts_ict.webp'
 
 const Work = () => {
     return (
-        <section id='work' className='section h-screen'>
+        <section id='work' className='section h-screen mb-[300px] lg:mb-[100px]'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row gap-x-10'>
                     <motion.div
-                        variants={fadeIn('down', 0.3)}
+                        variants={fadeIn('right', 0.3)}
                         initial="hidden"
                         whileInView={'show'}
                         viewport={{once: false, amount: 0.3}}
@@ -62,11 +62,11 @@ const Work = () => {
                         </a>
                     </motion.div>
                     <motion.div
-                        variants={fadeIn('up', 0.3)}
+                        variants={fadeIn('left', 0.3)}
                         initial="hidden"
                         whileInView={'show'}
                         viewport={{once: false, amount: 0.7}}
-                        className='flex-1 flex flex-col gap-y-10 lg:h-screen'>
+                        className='flex-1 flex flex-col gap-y-10'>
                         {/* image */}
                         <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
                             {/*overlay*/}
@@ -118,6 +118,7 @@ const Work = () => {
                     </motion.div>
                 </div>
             </div>
+            <div className='h-[140px]'></div>
         </section>
     );
 };

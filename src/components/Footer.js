@@ -6,9 +6,13 @@ import {BsClipboardData, BsBriefcase, BsChatSquare} from 'react-icons/bs';
 
 import {Link} from 'react-scroll';
 
+// img
+import Logo from '../assets/not-logo.svg';
+import ArtsIct from '../assets/services.png';
+
 const Footer = () => {
     return (
-        <footer className='mt-16 bottom-2 lg:bottom-8 w-full overflow-hidden z-50 '>
+        <footer className='bottom-2 lg:bottom-8 w-full overflow-hidden z-50 text-wrap text-pretty'>
             <section id='footer'
                 className="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between"
             >
@@ -25,11 +29,13 @@ const Footer = () => {
                     <a href="#contact" className="hover:opacity-80">Contact</a>
                 </nav>
                 <div className="flex flex-col sm:gap-2">
-                    <p className="text-right">
+                    <p className="text-right text-nowrap">
                         &copy; <span id="year">2024</span> Arts ICT | All rights reserved
                     </p>
                     <p className="text-right"></p>
                 </div>
+                {/*Arts ICT */}
+                <img className='mx-auto mx-3 mt-10' src={ArtsIct} alt='Arts ict'/>
             </section>
             <p className="p-4 flex flex-col text-right text-xs">
                 Arts ICT, Tristan Arts, and their respective logos, products, and services are trademarks of Tristan

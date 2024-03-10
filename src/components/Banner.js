@@ -25,7 +25,7 @@ const handleDownload = () => {
 
 
 const Banner = () => {
-    return (<section className='min-h-[85wh] lg:min-h-[78wh] flex items-center h-screen'>
+    return (<section className='min-h-[85wh] lg:min-h-[78wh] flex items-center h-screen mb-[300px] mt-16'>
         <div className='container mx-auto'>
             <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'>
                 {/*    text */}
@@ -106,6 +106,7 @@ const Banner = () => {
                 </motion.div>
             </div>
         </div>
+        <div className='h-[140px]'></div>
     </section>);
 };
 

@@ -16,7 +16,7 @@ const About = () => {
     });
 
     return (
-        <section id='about' className='section mb-16 h-screen' ref={ref}>
+        <section id='about' className='section mb-16 h-screen mb-[500px]' ref={ref}>
             <div className='container mx-auto'>
                 <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
                     {/*    img */}

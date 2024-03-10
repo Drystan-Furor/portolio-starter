@@ -18,11 +18,14 @@ const App = () => {
       <Nav />
       <About />
       <Services />
+        <div className='h-[400px]'></div>
       <Work />
       <Contact />
+        <div className='h-[800px]'></div>
       <Testimonials />
+        <div className='h-[1000px]'></div>
       <Footer />
-        <div className='h-[140px]'></div>
+        <div className='h-[200px]'></div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import ArtsIct from "../assets/services.png";
 
 
 const Header = () => {
-    return <header id='home' className='py-8 '>
+    return <header id='home' className='py-8 mb-16'>
         <div className='container mx-auto'>
             <div className='flex justify-between items-center'>
                 {/* LOGO */}
@@ -13,7 +13,7 @@ const Header = () => {
                     <img src={Logo} alt="Logo"/>
                 </a>
                 {/*Arts ICT */}
-                <img className='mx-auto mx-3' src={ArtsIct} alt='Arts ict'/>
+                <img className='mx-auto mx-3 hidden md:block' src={ArtsIct} alt='Arts ict'/>
                 {/* button */}
                 <button className='btn btn-sm'>
                     <a href='#testimonials'>

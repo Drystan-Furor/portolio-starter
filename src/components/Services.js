@@ -40,7 +40,7 @@ const services = [
 
 const Services = () => {
     return (
-        <section id='services' className='section mb-12 h-screen'>
+        <section id='services' className='section h-screen mb-[300px]'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row'>
                     {/*text & img*/}
@@ -75,12 +75,12 @@ const Services = () => {
                                 //destructure service
                                 const {name, description, link, href} = service;
                                 return (
-                                    <div key={index} className='border-b border-white/20 h-[146px] mb-[30px] flex'>
+                                    <div key={index} className='border-b border-white/20 h-[146px] text-sm md:text-base lg:text-xl mb-[25px] flex text-wrap'>
                                         <div className='max-w-[476px]'>
                                             <h4 className='h2 text-[20px] tracking-wilder mb-6 anta-regular text-yellow-300 '>
                                                 {name}
                                             </h4>
-                                            <p className='font-secondary leading-tight'>
+                                            <p className='font-secondary leading-tight mb-12'>
                                                 {description}
                                             </p>
                                         </div>

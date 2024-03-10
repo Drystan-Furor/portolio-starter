@@ -3,16 +3,12 @@ import React from 'react';
 import {motion} from "framer-motion";
 // variants
 import {fadeIn} from "../variants";
-// img
-import Logo from '../assets/not-logo.svg';
-import ArtsIct from '../assets/services.png';
-
 
 
 const Testimonials = () => {
     return (
         <section id='testimonials'
-                 className='section h-screen'>
+                 className='section'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row'>
                     {/* text */}
@@ -28,8 +24,6 @@ const Testimonials = () => {
                             </h4>
                             <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>
                                 What people think of <br/> <span className='text-accent'>Arts ICT!</span>
-                                {/*Arts ICT */}
-                                <img className='mx-auto mx-3 mt-16' src={ArtsIct} alt='Arts ict'/>
                             </h2>
                         </div>
                     </motion.div>
@@ -44,7 +38,7 @@ const Testimonials = () => {
                             <h2 className="text-4xl font-bold text-center mb-8 text-gradient">
                                 Testimonials
                             </h2>
-                            <div className="flex flex-wrap">
+                            <div className="flex flex-col md:flex-col w-full">
                                 <div className="w-full px-2 mb-4">
                                     <div className="bg-slate-200 rounded shadow py-2">
                                         <p className="text-accent text-base px-6 mb-5">
@@ -102,12 +96,12 @@ const Testimonials = () => {
                                         </p>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </motion.div>
                 </div>
             </div>
+            <div className='h-[140px]'></div>
         </section>
     );
 };

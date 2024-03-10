@@ -18,7 +18,7 @@ const handleSubmit = (e) => {
 
 const Contact = () => {
     return (
-        <section id='contact' className='py-16 section h-screen mb-[1000px]'>
+        <section id='contact' className='py-16 section h-screen mb-[300px]'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row'>
                     {/* text */}
@@ -70,6 +70,7 @@ const Contact = () => {
                     </motion.form>
                 </div>
             </div>
+            <div className='h-[140px]'></div>
         </section>
     );
 };
