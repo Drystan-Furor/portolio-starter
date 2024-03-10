@@ -2,6 +2,7 @@ import React from 'react';
 // import icons
 import {BiHomeAlt, BiUser} from 'react-icons/bi';
 import {BsClipboardData, BsBriefcase, BsChatSquare} from 'react-icons/bs';
+import { MdReviews } from "react-icons/md";
 // link
 
 import {Link} from 'react-scroll';
@@ -44,6 +45,12 @@ const Nav = () => {
                           spy={true}
                           className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
                         <BsChatSquare/>
+                    </Link>
+                    <Link to='testimonials' activeClass='active'
+                          smooth={true}
+                          spy={true}
+                          className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
+                        <MdReviews />
                     </Link>
                 </div>
             </div>

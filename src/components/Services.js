@@ -9,28 +9,32 @@ import {fadeIn} from "../variants";
 // services data
 const services = [
     {
-        name: 'Lorem Ipsum',
+        name: 'Platform Engineer',
         description:
-            'felis epicurei nominavi referrentur nisl hendrerit graecis diam fermentum congue viris habitasse definitionem potenti errem dicta sea no sonet mattis',
+            'Transforming airports into seamless, tech-driven hubs. Pioneering in a mission-critical environment. Pushing technology boundaries at Enabling Technologies!',
         link: 'Learn more',
+        href: 'https://careers.schipholgroup.com/',
     },
     {
-        name: 'Dolor Sit',
+        name: 'Application Consultant',
         description:
-            'felis epicurei nominavi referrentur nisl hendrerit graecis diam fermentum congue viris habitasse definitionem potenti errem dicta sea no sonet mattis',
+            'Development and maintenance of a web portal using eHerkenning for companies to submit, consult, or modify their data, such asinsurance for employees working abroad.',
         link: 'Learn more',
+        href: 'https://werkenbijdesvb.nl/',
     },
     {
-        name: 'Nominavi referrentur',
+        name: 'D&D 5e DM Toolkit Developer',
         description:
-            'felis epicurei nominavi referrentur nisl hendrerit graecis diam fermentum congue viris habitasse definitionem potenti errem dicta sea no sonet mattis',
-        link: 'Learn more',
+            'Implementation, development, styling and formatting of website, writing and developing algorithms, testing, bug fixes. Process user stories. CI/CD.',
+        link: 'Go To',
+        href: 'https://dndnext.onrender.com/',
     },
     {
-        name: 'Viris habitasse',
+        name: 'Game Developer',
         description:
-            'felis epicurei nominavi referrentur nisl hendrerit graecis diam fermentum congue viris habitasse definitionem potenti errem dicta sea no sonet mattis',
-        link: 'Learn more',
+            'Reconstructing a once popular gaming app in Python. Flappybird with a graphic design based on DOOM. Programming a py.script and building an executable.' ,
+        link: 'Visit repo',
+        href: 'https://github.com/Drystan-Furor/FlappyBirdGame',
     },
 ]
 
@@ -45,11 +49,18 @@ const Services = () => {
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: false, amount: 0.3}}
-                        className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'>
+                        className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0 mr-3'>
                         <h2 className='h2 text-accent mb-6'>What I Do</h2>
-                        <h3 className='h3 max-w-[455px] mb-16'>Accusata veritus legimus omnesque utamur class aliquid
-                            salutatus iusto porro</h3>
-                        <button className='btn btn-sm'>See my work</button>
+                        <h3 className='h3 max-w-[455px] mb-16'>
+                            Tristan has contributed to the development,implementation, and maintenance of web
+                            applications and customer portals, including migration projects and the modernization of
+                            outdated technologies.
+                        </h3>
+                        <button className='btn btn-sm'>
+                            <a href='#work'>
+                                See my work
+                            </a>
+                        </button>
                     </motion.div>
                     {/*    services*/}
                     <motion.div
@@ -61,31 +72,30 @@ const Services = () => {
                         {/*   services list*/}
                         <div>
                             {services.map((service, index) => {
-                                    //destructure service
-                                    const {name, description, link} = service;
-                                    return (
-                                        <div key={index} className='border-b border-white/20 h-[146px] mb-[30px] flex'>
-                                            <div className='max-w-[476px]'>
-                                                <h4 className='text-[20px] tracking-wilder font-primary font-semibold mb-6'>
-                                                    {name}
-                                                </h4>
-                                                <p className='font-secondary leading-tight'>
-                                                    {description}
-                                                </p>
-                                            </div>
-                                            <div className='flex flex-col flex-1 items-end'>
-                                                <a href='#' className='btn w-9 h-9 mb-[4spx] flex justify-center items-center'>
-                                                    <BsArrowUpRight />
-                                                </a>
-                                                <a href='#' className='text-gradient text-sm'>
-                                                    {link}
-                                                </a>
-
-                                            </div>
+                                //destructure service
+                                const {name, description, link, href} = service;
+                                return (
+                                    <div key={index} className='border-b border-white/20 h-[146px] mb-[30px] flex'>
+                                        <div className='max-w-[476px]'>
+                                            <h4 className='h2 text-[20px] tracking-wilder mb-6 anta-regular text-yellow-300 '>
+                                                {name}
+                                            </h4>
+                                            <p className='font-secondary leading-tight'>
+                                                {description}
+                                            </p>
                                         </div>
-                                    );
-                                }
-                            )}
+                                        <div className='flex flex-col flex-1 items-end'>
+                                            <a href={href}
+                                               className='btn w-9 h-9 mb-[4spx] flex justify-center items-center'>
+                                                <BsArrowUpRight/>
+                                            </a>
+                                            <a href='#' className='text-gradient text-sm'>
+                                                {link}
+                                            </a>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </motion.div>
                 </div>

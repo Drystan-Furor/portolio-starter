@@ -1,12 +1,24 @@
 import React from 'react';
-import {fadeIn} from "../variants";
 // motion
 import {motion} from "framer-motion";
 // variants
+import {fadeIn} from "../variants";
+
+// Handler to open email client
+const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+
+    const mailtoLink = `mailto:tristanarts@icloud.com?subject=Contact from ${name}&body=Message: ${message}%0D%0AFrom: ${name} (${email})`;
+    window.location.href = mailtoLink;
+};
 
 const Contact = () => {
     return (
-        <section id='contact' className='py-16 lg:section h-screen'>
+        <section id='contact' className='py-16 section h-screen mb-[1000px]'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row'>
                     {/* text */}
@@ -16,17 +28,25 @@ const Contact = () => {
                         whileInView={"show"}
                         viewport={{once: false, amount: 0.3}}
                         className='flex-1 flex justify-start tems-center'>
-                        <div>
+                        <div className='mb-6'>
                             <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking wide'>
                                 Get in touch
                             </h4>
                             <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>
                                 Let's work <br/> together!
                             </h2>
+                            <div>
+                                <a href="tel:+31678347895">
+                                    <button className='btn btn-lg'>
+                                        Call Me
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                     {/* form */}
                     <motion.form
+                        onSubmit={handleSubmit}
                         variants={fadeIn('left', 0.3)}
                         initial="hidden"
                         whileInView={"show"}
@@ -44,17 +64,14 @@ const Contact = () => {
                         />
                         <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white
                         focus:border-accent transition-all resize-none mb-12'
-                        placeholder= 'Your message'>
+                                  placeholder='Your message'>
                         </textarea>
                         <button className='btn btn-lg'>Send message</button>
                     </motion.form>
-
                 </div>
             </div>
         </section>
     );
-
-
 };
 
 export default Contact;

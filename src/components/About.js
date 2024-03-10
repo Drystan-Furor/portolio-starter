@@ -16,7 +16,7 @@ const About = () => {
     });
 
     return (
-        <section id='about' className='section' ref={ref}>
+        <section id='about' className='section mb-16 h-screen' ref={ref}>
             <div className='container mx-auto'>
                 <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
                     {/*    img */}
@@ -35,50 +35,61 @@ const About = () => {
                         viewport={{once: false, amount: 0.3}}
                         className='flex-1'>
                         <h2 className='h2 text-accent'>About me.</h2>
-                        <h3 className='h3 mb-4'>I'm a Freelance back-end Java developer with almost 5 years of
-                            experience</h3>
+                        <h3 className='h3 mb-4 atomic-age-regular'>"I'm a Freelance back-end Java developer with almost 5 years of
+                            experience"</h3>
                         <p className='mb-6'>
-                            Ornatus reprehendunt volumus suavitate porttitor varius theophrastus dui eripuit neque
-                            vivamus himenaeos persequeris quis scelerisque eum faucibus patrioque ipsum eu reprimique
-                            indoctum accommodare ipsum scelerisque a ornatus suspendisse consul amet
+                            Driven by the questions: What do I really like to do? What gives me energy? What
+                            am I good at? He decided to become a Software Engineer in 2020. In 2022 he started as a
+                            Java Developer, by 2024 he became a Platform Engineer.
+                        </p>
+                        <p className='mb-6'>
+                            Tristan is described as friendly, clear, and experienced in leadership.
+                            He quickly becomes a valuable team member, showcasing his talent and dedication by excelling
+                            in his role, working independently, learning new skills with ease, and expanding his
+                            knowledge in the field. He maintains balance in his work through the use of SCRUM
+                            methodologies.
                         </p>
                         {/*    stats*/}
                         {inView && (
-                        <div className=' flex gap-v-6 lg:gap-x-10 mb-12'>
+                            <div className=' flex gap-v-6 lg:gap-x-10 mb-12'>
 
-                            <div>
-                                <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>
-                                    <CountUp start={0} end={4} duration={3} />+
+                                <div>
+                                    <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>
+                                        <CountUp start={0} end={4} duration={3}/>+
+                                    </div>
+                                    <div className='font-primary text-sm tracking-[2px]'>
+                                        Years of <br/>
+                                        Experience
+                                    </div>
                                 </div>
-                                <div className='font-primary text-sm tracking-[2px]'>
-                                    Years of <br/>
-                                    Experience
-                                </div>
-                            </div>
 
-                            <div>
-                                <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>
-                                    <CountUp start={0} end={47} duration={4} />+
+                                <div>
+                                    <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>
+                                        <CountUp start={0} end={47} duration={4}/>+
+                                    </div>
+                                    <div className='font-primary text-sm tracking-[2px]'>
+                                        Projects <br/>
+                                        Completed
+                                    </div>
                                 </div>
-                                <div className='font-primary text-sm tracking-[2px]'>
-                                    Projects <br/>
-                                    Completed
+                                <div>
+                                    <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>
+                                        <CountUp start={0} end={42} duration={3}/>+
+                                    </div>
+                                    <div className='font-primary text-sm tracking-[2px]'>
+                                        Happy <br/>
+                                        Clients
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>
-                                    <CountUp start={0} end={42} duration={3}/>+
-                                </div>
-                                <div className='font-primary text-sm tracking-[2px]'>
-                                    Happy <br/>
-                                    Clients
-                                </div>
-                            </div>
-                        </div>
                         )}
                         <div className='flex gap-x-8 items-center '>
-                            <button className='btn btn-lg'>Contact me</button>
-                            <a href='#' className='text-gradient btn-link'>
+                            <button className='btn btn-lg'>
+                                <a href='#contact'>
+                                    Contact me
+                                </a>
+                            </button>
+                            <a href='#services' className='text-gradient btn-link'>
                                 My Portfolio
                             </a>
                         </div>

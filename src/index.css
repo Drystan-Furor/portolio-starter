@@ -40,6 +40,19 @@
   border-radius: 100%;
 }
 
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.atomic-age-regular {
+  font-family: "Atomic Age", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @layer base {
   body {
     @apply font-secondary text-lg leading-8 text-white;
