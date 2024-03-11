@@ -36,7 +36,7 @@ const Contact = () => {
                                 Let's work <br/> together!
                             </h2>
                             <div>
-                                <a href="tel:+31678347895">
+                                <a href="tel:+31624770098">
                                     <button className='btn btn-lg'>
                                         Call Me
                                     </button>

@@ -18,9 +18,11 @@ const Footer = () => {
             >
                 <address>
                     <h2>Tristan Arts</h2>
-                    Email: <a href="mailto:artstristan@gmail.com">TristanArts@icloud.com</a
-                ><br/>
+                    Email: <a href="mailto:artstristan@gmail.com">TristanArts@icloud.com</a>
+                    <br/>
                     Phone: <a href="tel:+331624770098">(+31) 6 24770098</a>
+                    <br/>
+                    KVK: 92120164 | Btw-id: NL004937299B82
                 </address>
                 <nav className="hidden md:flex flex-col gap-2" aria-label="footer">
                     <a href="#home" className="hover:opacity-80">Home</a>
