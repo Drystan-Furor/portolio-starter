@@ -92,7 +92,7 @@ const Testimonials = () => {
                                         </p>
                                         <p className="text-center">
                                             <div className="mx-auto text-center">⭐⭐⭐⭐⭐</div>
-                                            <span className="text-gradient text-xs md:text-sm px-6">SMT ICT</span>
+                                            <span className="text-gradient text-xs md:text-sm px-6">Avans+</span>
                                         </p>
                                     </div>
                                 </div>
