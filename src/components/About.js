@@ -51,7 +51,7 @@ const About = () => {
                         </p>
                         {/*    stats*/}
                         {inView && (
-                            <div className=' flex gap-v-6 lg:gap-x-10 mb-12'>
+                            <div className=' flex gap-v-6 mr-3 lg:gap-x-10 mb-12'>
 
                                 <div>
                                     <div className='text-[40px] font-tertiary text-gradient mb-2 pt-3'>

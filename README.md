@@ -20,5 +20,13 @@ npm audit fix --force
 ```
 
 
+First, you'll need to sign up for EmailJS and set up your email template and service ID. Once you have your EmailJS account set up, follow these steps to adapt your component:
+```Install EmailJS SDK
+ npm install emailjs-com
+ npm uninstall emailjs-com
+ npm install @emailjs/browser
+
+
+```
 
 

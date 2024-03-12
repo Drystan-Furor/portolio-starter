@@ -1,24 +1,35 @@
-import React from 'react';
+import React, {useRef} from 'react';
 // motion
 import {motion} from "framer-motion";
 // variants
 import {fadeIn} from "../variants";
-
-// Handler to open email client
-const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-
-    const mailtoLink = `mailto:tristanarts@icloud.com?subject=Contact from ${name}&body=Message: ${message}%0D%0AFrom: ${name} (${email})`;
-    window.location.href = mailtoLink;
-};
+// Import emailjs
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+    const btn = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        if (btn.current) btn.current.value = 'Sending...';
+
+        const serviceID = 'service_6w5bvdh';
+        const templateID = 'template_epp41tf';
+        const userID = 'h7xiNrW-pTzv7e_3G';
+
+        emailjs.sendForm(serviceID, templateID, form.current, userID)
+            .then(() => {
+                if (btn.current) btn.current.value = 'Send message';
+                alert('Thank you for your message, Arts ICT will reply as soon as possible.');
+            }, (err) => {
+                if (btn.current) btn.current.value = 'Send message';
+                alert(JSON.stringify(err));
+            });
+    };
+
     return (
-        <section id='contact' className='py-16 section h-screen mb-[300px]'>
+        <section id='contact' className='py-16 lg:section h-screen'>
             <div className='container mx-auto'>
                 <div className='flex flex-col lg:flex-row'>
                     {/* text */}
@@ -27,52 +38,69 @@ const Contact = () => {
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: false, amount: 0.3}}
-                        className='flex-1 flex justify-start tems-center'>
-                        <div className='mb-6'>
-                            <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking wide'>
+                        className='flex-1 flex justify-start items-center'>
+                        <div>
+                            <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
                                 Get in touch
                             </h4>
                             <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>
-                                Let's work <br/> together!
+                                Let's work together!
                             </h2>
                             <div>
-                                <a href="tel:+31624770098">
-                                    <button className='btn btn-lg'>
-                                        Call Me
-                                    </button>
-                                </a>
+                                <button className='btn btn-lg m-3'>
+                                    Email: <a href="mailto:artstristan@gmail.com">TristanArts@icloud.com</a>
+                                </button>
+                                <button className='btn btn-lg m-3'>
+                                    <a href="tel:+31624770098">
+                                        Call Arts ICT
+                                    </a>
+                                </button>
                             </div>
                         </div>
                     </motion.div>
                     {/* form */}
                     <motion.form
-                        onSubmit={handleSubmit}
+                        ref={form} onSubmit={sendEmail} id="form"
                         variants={fadeIn('left', 0.3)}
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: false, amount: 0.3}}
                         className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'>
-                        <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white
-                        focus:border-accent transition-all'
-                               type='text'
-                               placeholder='Your name'
+                        <input className='hidden' type="text" name="to_name" id="to_name" value="Arts ICT"/>
+                        <input
+                            className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
+                            type='text'
+                            name='from_name'
+                            id="from_name"
+                            placeholder='Your name'
                         />
-                        <input className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white
-                        focus:border-accent transition-all'
-                               type='text'
-                               placeholder='Your e-mail'
+                        <input
+                            className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
+                            type='email'
+                            name="reply_to"
+                            id="reply_to"
+                            placeholder='Your e-mail'
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                            title="Please enter a valid email address."
                         />
-                        <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white
-                        focus:border-accent transition-all resize-none mb-12'
-                                  placeholder='Your message'>
-                        </textarea>
-                        <button className='btn btn-lg'>Send message</button>
+                        <textarea
+                            className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12'
+                            name="message"
+                            id="message"
+                            placeholder='Your message'
+                        />
+                        <input ref={btn} type='submit' id="button" className='btn btn-lg mx-auto' value='Send message'/>
+
+                        <script type="text/javascript"
+                                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                        <script type="text/javascript">
+                            emailjs.init('h7xiNrW-pTzv7e_3G')
+                        </script>
                     </motion.form>
                 </div>
             </div>
-            <div className='h-[140px]'></div>
         </section>
     );
 };
-
 export default Contact;
