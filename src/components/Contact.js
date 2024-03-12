@@ -5,6 +5,9 @@ import {motion} from "framer-motion";
 import {fadeIn} from "../variants";
 // Import emailjs
 import emailjs from '@emailjs/browser';
+// icons
+import {FiPhoneCall} from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Contact = () => {
     const form = useRef();
@@ -38,7 +41,7 @@ const Contact = () => {
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: false, amount: 0.3}}
-                        className='flex-1 flex justify-start items-center'>
+                        className='flex-1 flex justify-start items-center mb-10'>
                         <div>
                             <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
                                 Get in touch
@@ -46,14 +49,18 @@ const Contact = () => {
                             <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>
                                 Let's work together!
                             </h2>
-                            <div>
-                                <button className='btn btn-lg m-3'>
-                                    Email: <a href="mailto:artstristan@gmail.com">TristanArts@icloud.com</a>
-                                </button>
-                                <button className='btn btn-lg m-3'>
+                            <div className='flex flex-col items-center'>
+                                Phone:
+                                <button className='btn btn-lg m-3 mb-10'>
                                     <a href="tel:+31624770098">
-                                        Call Arts ICT
+                                        <FiPhoneCall/>
                                     </a>
+                                </button>
+                                E-mail:
+                                <button className='btn btn-lg m-3'>
+                                     <a href="mailto:artstristan@gmail.com">
+                                         <MdOutlineEmail />
+                                     </a>
                                 </button>
                             </div>
                         </div>
@@ -65,7 +72,7 @@ const Contact = () => {
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: false, amount: 0.3}}
-                        className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'>
+                        className='flex-1 form-container border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'>
                         <input className='hidden' type="text" name="to_name" id="to_name" value="Arts ICT"/>
                         <input
                             className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
@@ -89,11 +96,10 @@ const Contact = () => {
                             id="message"
                             placeholder='Your message'
                         />
-                        <input ref={btn} type='submit' id="button" className='btn btn-lg mx-auto' value='Send message'/>
-
+                        <input ref={btn} type='submit' id="button" className='btn btn-lg mx-auto mt-16' value='Send message'/>
                         <script type="text/javascript"
-                                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
+                                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+                        </script>
                         <script type="text/javascript">
                             emailjs.init('h7xiNrW-pTzv7e_3G')
                         </script>
@@ -104,3 +110,4 @@ const Contact = () => {
     );
 };
 export default Contact;
+

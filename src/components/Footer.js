@@ -12,6 +12,7 @@ import ArtsIct from '../assets/services.png';
 
 const Footer = () => {
     return (
+
         <footer className='bottom-2 lg:bottom-8 w-full overflow-hidden z-50 text-wrap text-pretty h-screen'>
             <section id='footer'
                      className="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
@@ -36,7 +37,7 @@ const Footer = () => {
                         &copy; <span id="year">2024</span> Arts ICT | All rights reserved
                         {/*Arts ICT */}
                         <a href='https://arts-ict.onrender.com'>
-                        <img className='mx-auto mx-3 mt-10' src={ArtsIct} alt='Arts ict'/>
+                        <img className='mx-auto mx-3 mt-10 mix-blend-lighten' src={ArtsIct} alt='Arts ict'/>
                         </a>
                     </p>
                 </div>
@@ -46,6 +47,15 @@ const Footer = () => {
                 Arts in the Netherlands and other countries. All other trademarks are the property
                 of their respective owners.
             </p>
+            <div className="pyramid-loader mx-auto">
+                <div className="wrapper">
+                    <span className="side side1"></span>
+                    <span className="side side2"></span>
+                    <span className="side side3"></span>
+                    <span className="side side4"></span>
+                    <span className="shadow"></span>
+                </div>
+            </div>
         </footer>
     )
 };

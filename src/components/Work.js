@@ -6,7 +6,7 @@ import {fadeIn} from "../variants";
 // img
 import Img1 from '../assets/portfolio-img1.png'
 import Img2 from '../assets/portfolio-img2.png'
-import Img3 from '../assets/projects_arts_ict.webp'
+import Img3 from '../assets/t-shirt.png'
 
 
 const Work = () => {
@@ -74,7 +74,7 @@ const Work = () => {
                                 className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'>
                             </div>
                             {/* img */}
-                            <img className='group-hover:scale-125 transition-all duration-500'
+                            <img className='group-hover:scale-125 transition-all duration-500 mx-auto'
                                  src={Img2} alt='project 1'/>
                             {/* pre title*/}
                             <div
