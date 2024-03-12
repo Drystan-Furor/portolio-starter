@@ -12,7 +12,7 @@ import ArtsIct from '../assets/services.png';
 
 const Footer = () => {
     return (
-        <footer className='bottom-2 lg:bottom-8 w-full overflow-hidden z-50 text-wrap text-pretty'>
+        <footer className='bottom-2 lg:bottom-8 w-full overflow-hidden z-50 text-wrap text-pretty h-screen'>
             <section id='footer'
                      className="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
                 <address>

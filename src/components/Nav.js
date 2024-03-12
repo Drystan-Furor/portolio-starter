@@ -2,6 +2,7 @@ import React from 'react';
 // import icons
 import {BiHomeAlt, BiUser} from 'react-icons/bi';
 import {BsClipboardData, BsBriefcase, BsChatSquare} from 'react-icons/bs';
+import { LuMenuSquare } from "react-icons/lu";
 import { MdReviews } from "react-icons/md";
 // link
 
@@ -51,6 +52,12 @@ const Nav = () => {
                           spy={true}
                           className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
                         <MdReviews />
+                    </Link>
+                    <Link to='footer' activeClass='active'
+                          smooth={true}
+                          spy={true}
+                          className='cursor-pointer w-[60px] h-[60px] flex items-center justify-center'>
+                        <LuMenuSquare />
                     </Link>
                 </div>
             </div>
