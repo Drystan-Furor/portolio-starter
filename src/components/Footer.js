@@ -9,6 +9,9 @@ import {Link} from 'react-scroll';
 // img
 import Logo from '../assets/not-logo.svg';
 import ArtsIct from '../assets/services.png';
+import favicon from '../assets/favicon.ico';
+import Image from "../assets/hero-portrait.png";
+
 
 const Footer = () => {
     return (
@@ -56,6 +59,7 @@ const Footer = () => {
                     <span className="shadow"></span>
                 </div>
             </div>
+            <img src={favicon} alt='favicon' className='hidden'/>
         </footer>
     )
 };
