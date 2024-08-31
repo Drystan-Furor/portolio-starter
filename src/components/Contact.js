@@ -97,6 +97,7 @@ const Contact = () => {
                             name="message"
                             id="message"
                             placeholder='Your message'
+                            title="Please enter a message."
                             required
                         />
                         <input ref={btn} type='submit' id="button" className='btn btn-lg mx-auto mt-16' value='Send message'/>
