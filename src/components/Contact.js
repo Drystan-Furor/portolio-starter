@@ -80,6 +80,7 @@ const Contact = () => {
                             name='from_name'
                             id="from_name"
                             placeholder='Your name'
+                            required
                         />
                         <input
                             className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
@@ -89,12 +90,14 @@ const Contact = () => {
                             placeholder='Your e-mail'
                             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                             title="Please enter a valid email address."
+                            required
                         />
                         <textarea
                             className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12'
                             name="message"
                             id="message"
                             placeholder='Your message'
+                            required
                         />
                         <input ref={btn} type='submit' id="button" className='btn btn-lg mx-auto mt-16' value='Send message'/>
                         <script type="text/javascript"
