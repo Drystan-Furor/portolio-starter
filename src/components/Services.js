@@ -27,7 +27,7 @@ const services = [
         description:
             'Implementation, development, styling and formatting of website, writing and developing algorithms, testing, bug fixes. Process user stories. CI/CD.',
         link: 'Go To',
-        href: 'https://dndnext.onrender.com/',
+        href: 'https://dnd-app-40hm.onrender.com/',
     },
     {
         name: 'Game Developer',
