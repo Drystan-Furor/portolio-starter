@@ -18,14 +18,14 @@ const services = [
     {
         name: 'Application Consultant',
         description:
-            'Development and maintenance of a web portal using eHerkenning for companies to submit, consult, or modify their data, such asinsurance for employees working abroad.',
+            'Development and maintenance of a web portal using eHerkenning for companies to submit, consult, or modify their data, such as insurances for employees working abroad.',
         link: 'Learn more',
         href: 'https://werkenbijdesvb.nl/',
     },
     {
         name: 'D&D 5e DM Toolkit Developer',
         description:
-            'Implementation, development, styling and formatting of website, writing and developing algorithms, testing, bug fixes. Process user stories. CI/CD.',
+            'Implementation, development, styling and formatting of a Java Spring Boot web service, writing and developing algorithms, testing, bug fixes. Process user stories. CI/CD.',
         link: 'Go To',
         href: 'https://dnd-app-40hm.onrender.com/',
     },
