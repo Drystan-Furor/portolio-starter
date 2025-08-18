@@ -28,5 +28,8 @@ First, you'll need to sign up for EmailJS and set up your email template and ser
 
 
 ```
+rm -rf node_modules package-lock.json
+npm install react-scripts@5.0.1
+npm install
 
 
